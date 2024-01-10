@@ -24,10 +24,10 @@ class GiphyPartyApp {
 
   async searchGif(searchTerm) {
     try {
-      const response = await axios.get("https://api.giphy.com/v1/gifs/search", {
-        params: { api_key: GiphyPartyApp.giphyApiKey, q: searchTerm, limit: 1 },
+      const response = await axios.get("https://api.giphy.com/v1/gifs/random", {
+        params: { api_key: GiphyPartyApp.giphyApiKey, tag: searchTerm },
       });
-      return response.data.data[0].images.original.url;
+      return response.data.data.images.original.url;
     } catch (e) {
       console.log("Error when contacting giphy:\n", e);
       return "";
