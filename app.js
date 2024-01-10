@@ -35,6 +35,6 @@ class GiphyPartyApp {
   }
 
   appendGif(imageUrl) {
-    $("#area-gif").append($("<div>").append($("<img>").attr("src", imageUrl)));
+    $("#area-gif").append($("<img>").attr("src", imageUrl).addClass("m-2"));
   }
 }
