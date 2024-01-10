@@ -7,6 +7,7 @@ class GiphyPartyApp {
 
   constructor() {
     $("#form-search").submit(this.handleSubmit.bind(this));
+    $("#button-remove").on("click", this.handleRemove.bind(this));
   }
 
   async handleSubmit(e) {
@@ -15,6 +16,10 @@ class GiphyPartyApp {
     const imageUrl = await this.searchGif(searchTerm);
     $("#input-search").val("");
     this.appendGif(imageUrl);
+  }
+
+  handleRemove(e) {
+    $("#area-gif").html("");
   }
 
   async searchGif(searchTerm) {
