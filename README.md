@@ -8,7 +8,7 @@ A user can type in a search term, and the app will then call the Giphy API Rando
 
 Tools used:  
 - HTML5
-- JavaScript
+- JavaScript ECMAScript 2018
 - JQuery v3
-- Axios
+- Axios v1.6.5
 - Bootstrap v5
